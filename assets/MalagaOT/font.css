@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'MalagaOT-RegItalic';
+  src: url('MalagaOT-RegItalic.eot');
+  src: url('MalagaOT-RegItalic.eot?#iefix') format('embedded-opentype'),
+       url('MalagaOT-RegItalic.svg#MalagaOT-RegItalic') format('svg'),
+       url('MalagaOT-RegItalic.ttf') format('truetype'),
+       url('MalagaOT-RegItalic.woff') format('woff'),
+       url('MalagaOT-RegItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+

@@ -1,0 +1,938 @@
+html {
+    font-size: 1rem;
+}
+
+body {
+    max-width: 1800px;
+    margin: 0 auto;
+    font-family: 'Titillium Web', sans-serif;
+    color: #454545;
+    position: relative;
+}
+
+.bg_wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.curve_bg {
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    left: 0;
+    top: 1777px;
+    opacity: 0.5;
+    background: #eeeeee;
+    background: linear-gradient(to bottom left, #eeeeee 0%, #ffffff 77%);
+    transform: skew(0, -6.5deg);
+}
+
+.top_panel, .log_bar, .language_bar, .start_links {
+    display: flex;
+}
+
+.top_panel {
+    width: 100%;
+    padding: 75px 0 0 0;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 440px;
+    margin: 0 0 0 29.44%;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.login::before, .facebook::before, .twitter::before, .google_plus::before, .apple::before, .google_play::before {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 900;
+}
+
+.login::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f2f6";
+    color: #582c7e;
+    padding: 0 8px 0 0;
+}
+
+.facebook::before {
+    content: "\f09a";
+}
+
+.google_plus::before {
+    content: "\f0d4";
+}
+
+.twitter::before {
+    content: "\f081";
+}
+
+.apple::before {
+    content: "\f179";
+}
+
+.google_play::before {
+    content: "\f3ab";
+}
+
+[name="upgrade_to_paid"]::before {
+    content: "\f382";
+}
+
+[name="donate"]::before {
+    content: "\f155";
+}
+
+.logo {
+    width: 22.22%;
+    padding: 0 0 0 11%;
+    font-weight: bold;
+    font-size: 1.875rem;
+    color: #858688;
+    box-sizing: border-box;
+}
+
+.logo span {
+    color: #5b4295;
+}
+
+.log_bar {
+    width: 200px;
+    margin-left: 2.6%;
+}
+
+.signup {
+    width: 94px;
+    height: 40px;
+    margin: 0 0 0 21px;
+    border: none;
+    border-radius: 30px;
+    background: #582c7e;
+    background: linear-gradient(140deg, #582c7e, #6378cf);
+    text-align: center;
+    box-shadow: 0px 7px 9px 0px rgba(142, 117, 222, 0.15);
+}
+
+.logo, nav, .log_bar li {
+    line-height: 43px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 23px 0 0;
+}
+
+.log_bar li:first-of-type {
+    padding: 0 0 0 4px;
+    box-sizing: border-box;
+    font-weight: bold;
+}
+
+.language_bar {
+    width: 236px;
+    justify-content: space-between;
+    margin: 15px 0 0 11%;
+    font-size: 0.875rem;
+    color: #959595;
+}
+
+.language_bar li:first-of-type {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.slash {
+    user-select: none;
+}
+
+header {
+    height: 998px;
+    background-image: url(../img/header_bg.png);
+    background-repeat: no-repeat;
+    background-size: 1800px 988px;
+    background-position: center center;
+}
+
+.general_info {
+    text-align: center;
+}
+
+.general_info__title {
+    font-size: 3.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 170px 0 16px 0;
+}
+
+.general_info__text p {
+    font-size: 2.25rem;
+    color: #464646;
+}
+
+.redword {
+    color: #fc2028;
+}
+
+[name="create_account"] {
+    width: 246px;
+    height: 56px;
+    margin: 0 25px 0 0;
+    border: none;
+    border-radius: 30px;
+    background: #5f2966;
+    background: linear-gradient(to left, #5f2966, #646c92);
+    box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15);
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+button {
+    color: #ffffff;
+}
+
+[name="appstore"], [name="google_play"] {
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.8;
+    font-size: 1.375rem;
+}
+
+[name="appstore"] {
+    background: #5f2966;
+    margin: 0 20px 0 0;
+}
+
+[name="google_play"] {
+    background: #4a1c50;
+}
+
+[name="create_account"],
+[name="appstore"],
+[name="google_play"] {
+    position: relative;
+    z-index: 2;
+}
+.start_links {
+    margin: 75px 0 0 0;
+    justify-content: center;
+    line-height: 56px;
+    overflow: hidden;
+    position: relative;
+}
+
+.start_links::before {
+    content: "";
+    width: 700px;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    bottom: 0;
+    border-radius: 0 0 100px 100px;
+    background: radial-gradient(ellipse at top, rgba(94, 123, 234, 0.6) 0%, rgba(94, 123, 234, 0.6) 10%, rgba(255, 0, 0, 0) 60%, rgba(255, 0, 0, 0) 100%);
+}
+
+.socialmedia_bar {
+    position: fixed;
+    top: 324px;
+    left: calc(100% - 52px);
+    font-size: 1.375rem;
+}
+
+.socialmedia_bar li {
+    margin-bottom: 16px;
+}
+
+main {
+    width: 100%;
+    margin-top: -209px;
+    display: grid;
+    grid-template-columns: 15.67% 6.56% 17.44% 24% 11.22% 2.89% 11.55% 10.67%;
+    grid-template-rows: 128px 227px 238px 196px 266px 368px 327px 287px;
+}
+
+.advantage__header {
+    display: flex;
+}
+
+[name="learn_more"] {
+    width: 334px;
+    height: 62px;
+    position: relative;
+    top: 22px;
+    left: 212px;
+    box-sizing: border-box;
+    border: 1px solid #b9b9b9;
+    border-radius: 33px;
+    background-color: #ffffff;
+    line-height: 57px;
+    color: #676767;
+    font-size: 0.9375rem;
+}
+
+.clients {
+    display: grid;
+}
+
+.clients {
+    grid-template: 1fr / repeat(6, 1fr) 804px;
+    align-items: center;
+    border-top: 1px solid #b9b9b9;
+}
+
+.clients li {
+    width: 166px;
+    height: 66px;
+    background-image: url(../img/clients_logos.png);
+    background-repeat: no-repeat;
+    background-size: 568.1%;
+    background-position-y: 4px;
+}
+
+.clients a, .partners__links a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.wsj {
+    background-position-x: 21px;
+}
+
+.times {
+    background-position-x: -145px;
+}
+
+.guardian {
+    background-position-x: -311px;
+}
+
+.forbes {
+    background-position-x: -477px;
+}
+
+.frankfurter {
+    background-position-x: -643px;
+}
+
+.fox {
+    background-position-x: -810px;
+}
+
+.download__links-ios::before, .download__links-android::before {
+    content: "";
+    display: inline-block;
+    width: 180px;
+    height: 55px;
+    margin-top: 29px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.download__links-ios::before {
+    background-image: url(../img/appstore_icon.png);
+    margin-right: 10px;
+}
+
+.download__links-android::before {
+    background-image: url(../img/googleplay_icon.png);
+    margin-right: -4px;
+}
+
+.download__links {
+    margin: -2px 43px 0 0;
+    text-align: right;
+}
+
+[name="upgrade_to_paid"], [name="donate"] {
+    position: relative;
+    z-index: none;
+    height: 56px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+[name="upgrade_to_paid"] {
+    width: 246px;
+    margin-right: 48px;
+    background: #5f2966;
+    background: linear-gradient(to left, #5f2966, #646c92);
+    box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15);
+}
+
+[name="donate"] {
+    width: 166px;
+    background: #5e7bea;
+    background: linear-gradient(to left, #5e7bea, #36bae1);
+    box-shadow: 0px 7px 9px 0px rgba(26, 230, 218, 0.15);
+}
+
+.partners__links li {
+    height: 92px;
+    display: inline-block;
+    background-image: url(../img/partners_icon.png);
+    background-repeat: no-repeat;
+    background-size: 974px 92px;
+}
+
+.mit {
+    width: 71px;
+    background-position-x: -25px;
+}
+
+.deltalis {
+    width: 60px;
+    margin-left: 69px;
+    background-position-x: -168px;
+}
+
+.fonfit {
+    width: 103px;
+    margin-left: 54px;
+    background-position-x: -285px;
+}
+
+.quovadis {
+    width: 113px;
+    margin-left: 27px;
+    background-position-x: -418px;
+}
+
+.cyberzov {
+    width: 46px;
+    margin-left: 55px;
+    background-position-x: -589px;
+}
+
+.radware {
+    width: 121px;
+    margin-left: 52px;
+    background-position-x: -690px;
+}
+
+.ipmax {
+    width: 41px;
+    margin-left: 56px;
+    background-position-x: -867px;
+}
+
+.empty_first {
+    grid-area: 1 / 1 / span 1 / span 3;
+    border-right: 1px solid #b9b9b9;
+}
+
+.empty_second {
+    grid-area: 1 / 7 / span 1 / span 1;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.empty_third {
+    grid-area: 7 / 7 / span 1 / span 2;
+    border-top: 1px solid #b9b9b9;
+    position: relative;
+    z-index: -2;
+}
+
+.privacy {
+    grid-area: 2 / 2 / span 1 / span 2;
+}
+
+.encryption {
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.anonymous {
+    grid-area: 2 / 5 / span 1 / span 3;
+}
+
+.feature {
+    grid-area: 3 / 2 / span 1 / span 3;
+}
+
+.clients {
+    grid-area: 4 / 1 / span 1 / span 4;
+}
+
+.slider {
+    grid-area: 5 / 2 / span 1 / span 3;
+    cursor: pointer;
+}
+
+.download {
+    grid-area: 6 / 2 / span 1 / span 3;
+}
+
+.donate {
+    grid-area: 7 / 3 / span 1 / span 4;
+}
+
+.partners {
+    grid-area: 8 / 1 / span 1 / span 6;
+}
+
+.advantage__title-main {
+    font-size: 1.875rem;
+    color: #555555;
+}
+
+.advantage__title-sub {
+    margin-bottom: 14px;
+    font-size: 1.125rem;
+    color: #555555;
+}
+
+.advantage__text {
+    font-size: 0.875rem;
+    color: #555555;
+    line-height: 1.6em;
+}
+
+.advantage {
+    box-sizing: border-box;
+}
+
+.privacy {
+    padding: 0 0 0 42px;
+}
+
+.encryption {
+    padding: 0 46px 0 46px;
+    border-right: 1px solid #b9b9b9;
+}
+
+.anonymous {
+    padding: 0 47px 0 52px;
+}
+
+.privacy .advantage__icon {
+    margin: -10px 6px 22px -15px;
+}
+
+.encryption .advantage__icon {
+    margin: -18px -8px 23px -27px;
+}
+
+.anonymous .advantage__icon {
+    margin: -8px 6px 27px -17px;
+}
+
+.privacy .advantage__header {
+    border-right: 1px solid #b9b9b9;
+}
+
+.privacy .advantage__text {
+    padding-right: 33px;
+}
+
+.feature__title {
+    margin-bottom: 17px;
+    font-size: 3.75rem;
+    color: #535353;
+}
+
+.feature__description {
+    font-size: 1.5rem;
+    color: #959393;
+}
+
+.feature {
+    text-align: end;
+    padding: 60px 48px 0px 0px;
+    border-right: 1px solid #b9b9b9;
+}
+
+.dots label {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #101010;
+    margin-bottom: 11px;
+}
+
+.slide:nth-of-type(1) label:not(:nth-of-type(1)) {
+    width: 11px;
+    height: 11px;
+    opacity: 0.3;
+}
+
+.slide:nth-of-type(2) label:not(:nth-of-type(2)) {
+    width: 11px;
+    height: 11px;
+    opacity: 0.3;
+}
+
+.slide:nth-of-type(3) label:not(:nth-of-type(3)) {
+    width: 11px;
+    height: 11px;
+    opacity: 0.3;
+}
+
+.slider input, .slide {
+    display: none;
+}
+
+#slide1:checked~.slide:nth-of-type(1) {
+    display: flex;
+}
+
+#slide2:checked~.slide:nth-of-type(2) {
+    display: flex;
+}
+
+#slide3:checked~.slide:nth-of-type(3) {
+    display: flex;
+}
+
+.slide {
+    padding: 0 216px 0 83px;
+    font-family: 'MalagaOT-RegItalic', cursive;
+    font-size: 1.5rem;
+    color: #101010;
+    line-height: 31px;
+}
+
+.slide .author {
+    font-size: 1rem;
+    color: #727272;
+}
+
+.dots {
+    width: 13px;
+    margin: 5px 26px 0 0;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+}
+
+.download__bg {
+    position: relative;
+    top: -492px;
+    left: 77.6%;
+    z-index: -1;
+}
+
+.download__title {
+    margin-bottom: 20px;
+    font-size: 2.25rem;
+    color: #535353;
+}
+
+.download__text {
+    font-size: 1rem;
+    color: #959393;
+    line-height: 22px;
+}
+
+.download__title, .download__text {
+    text-align: right;
+    padding: 0px 42px 0 388px;
+}
+
+.donate__title {
+    font-size: 2.25rem;
+    color: #535353;
+}
+
+.donate__description {
+    margin-bottom: 35px;
+    font-size: 1.8125rem;
+    color: #7c7c7c;
+    line-height: 43px;
+}
+
+.donate__text {
+    padding-top: 72px;
+    position: relative;
+    z-index: -2;
+    border-top: 1px solid #b9b9b9;
+    text-align: center;
+}
+
+.donate__links {
+    text-align: center;
+}
+
+.login::before, [name="upgrade_to_paid"]::before, [name="donate"]::before {
+    padding-right: 5px;
+    font-family: "Font Awesome 5 Free";
+}
+
+[name="upgrade_to_paid"]::before {
+    font-size: 0.9375rem;
+}
+
+.partners {
+    padding: 20px 23px 0 0;
+    border-top: 1px solid #b9b9b9;
+    border-right: 1px solid #b9b9b9;
+    text-align: right;
+    color: #7a7a7a;
+    font-size: 0.875rem;
+}
+
+footer {
+    display: grid;
+    height: 315px;
+    grid-template: 153px 97px 1fr / 11.12% 22.38% 19.17% 13.89% 11.21% 1fr;
+    color: #5c5c5c;
+    font-size: 1.125rem;
+}
+
+.contacts, .company li a, .legal li a, .neutronmail li a {
+    font-size: 0.875rem;
+}
+
+.copyright, .socialmedia_links {
+    font-size: 0.75rem;
+}
+
+.contacts {
+    grid-area: 1 / 2 / span 1 / span 1;
+    height: 134px;
+    padding-left: 20px;
+    line-height: 23px;
+    border-left: 1px solid #b9b9b9;
+}
+
+.company {
+    grid-area: 1 / 3 / span 3 / span 1;
+    border-right: 1px solid #b9b9b9;
+}
+
+.legal {
+    grid-area: 1 / 4 / span 1 / span 1;
+}
+
+.neutronmail {
+    grid-area: 1 / 5 / span 1 / span 1;
+    border-right: 1px solid #b9b9b9;
+}
+
+.socialmedia_links {
+    grid-area: 2 / 2 / span 1 / span 2;
+    display: flex;
+    align-items: flex-end;
+}
+
+.copyright {
+    grid-area: 3 / 2 / span 1 / span 1;
+    padding-top: 18px;
+}
+
+.company, .legal, .neutronmail {
+    padding-right: 26px;
+    list-style-type: square;
+    direction: rtl;
+}
+
+.company li, .legal li, .neutronmail li {
+    font-size: 0.625rem;
+    margin: 0 18px 10px 0;
+}
+
+.company li:first-of-type, .legal li:first-of-type, .neutronmail li:first-of-type {
+    margin-top: 31px;
+}
+
+.socialmedia_links li:not(.slash) {
+    text-decoration: underline;
+}
+
+.socialmedia_links li {
+    padding-right: 13px;
+}
+
+:not(button)>a:hover {
+    color: #5b4295;
+    transition: 0.3s;
+}
+
+button:hover, .download__links-ios:hover::before, .download__links-android:hover::before, .clients li:hover, .partners__links li:hover {
+    animation: swing 0.6s ease;
+    animation-iteration-count: 1;
+}
+
+.dots label:hover {
+    transform: scale(1.3);
+    transition: 0.3s;
+}
+
+@keyframes swing {
+    15% {
+        transform: translateX(9px);
+    }
+    30% {
+        transform: translateX(-9px);
+    }
+    40% {
+        transform: translateX(6px);
+    }
+    50% {
+        transform: translateX(-6px);
+    }
+    65% {
+        transform: translateX(3px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (min-width: 1801px) {
+    .socialmedia_bar {
+        left: calc((100% - 1800px) / 2 + 1748px);
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    nav {
+        margin: 0 5% 0 13%;
+    }
+    main {
+        grid-template-columns: 5.67% 6.56% 17.44% 32% 16.22% 2.89% 13.55% 5.67%;
+    }
+    footer {
+        grid-template: 153px 97px 1fr / 11.12% 22.38% 19.17% 14.89% 13.2% 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    html {
+        font-size: 12px;
+    }
+    .top_panel {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .log_bar, nav {
+        flex-wrap: nowrap;
+    }
+    nav, .logo {
+        width: auto;
+    }
+    nav {
+        margin: 0 0 0 50px;
+    }
+    .log_bar {
+        padding: 0 0 0 11%;
+        margin: 0;
+    }
+    .language_bar {
+        position: absolute;
+        top: 116px;
+        right: 23px;
+    }
+    .signup {
+        margin: 0 0 0 9px;
+    }
+    .contacts {
+        border-left: none;
+    }
+    .empty_first, .encryption, .feature, .partners, .company, .neutronmail, .privacy .advantage__header {
+        border-right: none;
+    }
+    .clients, .empty_second, .donate__text, .partners {
+        border-top: none;
+    }
+    .empty_second {
+        border-bottom: none;
+    }
+    .empty_first, .empty_second, .empty_third {
+        display: none;
+    }
+    main {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 128px 183px 238px 156px 220px 220px 269px 196px;
+    }
+    .privacy {
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+    .encryption {
+        grid-area: 2 / 2 / span 1 / span 1;
+    }
+    .anonymous {
+        grid-area: 2 / 3 / span 1 / span 1;
+    }
+    .feature {
+        grid-area: 3 / 1 / span 1 / span 3;
+    }
+    .clients {
+        grid-area: 4 / 1 / span 1 / span 3;
+    }
+    .slider {
+        grid-area: 5 / 1 / span 1 / span 3;
+        cursor: pointer;
+    }
+    .download {
+        grid-area: 6 / 1 / span 1 / span 3;
+    }
+    .donate {
+        grid-area: 7 / 1 / span 1 / span 3;
+    }
+    .partners {
+        grid-area: 8 / 1 / span 1 / span 3;
+    }
+    footer {
+        grid-template: 153px 97px 1fr / 1fr 1fr 1fr 1fr;
+    }
+    .contacts {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+    .company {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+    .legal {
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+    .neutronmail {
+        grid-area: 1 / 4 / span 1 / span 1;
+    }
+    .socialmedia_links {
+        grid-area: 2 / 1 / span 1 / span 4;
+        padding-left: 20px;
+    }
+    .copyright {
+        grid-area: 3 / 1 / span 1 / span 4;
+        padding-left: 20px;
+    }
+    [name="learn_more"] {
+        position: static;
+        margin-top: 20px;
+    }
+    .partners__links li {
+        margin-left: 10px;
+    }
+    .download__bg {
+        position: absolute;
+        z-index: -3;
+        top: 1545px;
+        left: 72px;
+        width: 46%;
+    }
+    .clients {
+        display: block;
+        text-align: center;
+    }
+    .clients li {
+        display: inline-block;
+    }
+    .start_links {
+        margin: 100px 0 0 0;
+    }
+    main {
+        margin-top: -310px;
+    }
+    .socialmedia_bar {
+        top: 50%;
+    }
+}
