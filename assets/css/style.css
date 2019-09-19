@@ -696,6 +696,14 @@ footer {
     font-size: 0.75rem;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
 .contacts {
     grid-area: 1 / 2 / span 1 / span 1;
     height: 134px;
