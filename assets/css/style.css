@@ -32,7 +32,11 @@ body {
     transform: skew(0, -6.5deg);
 }
 
-.top_panel, .log_bar, .language_bar, .start_links {
+.burger-menu {
+    display: none;
+}
+
+.top_panel, .log_bar, .language-bar, .start_links {
     display: flex;
 }
 
@@ -40,6 +44,10 @@ body {
     width: 100%;
     padding: 75px 0 0 0;
     box-sizing: border-box;
+}
+
+.language-bar--mini {
+    display: none;
 }
 
 nav {
@@ -134,7 +142,7 @@ nav a {
     font-weight: bold;
 }
 
-.language_bar {
+.language-bar, .language-bar--mini {
     width: 236px;
     justify-content: space-between;
     margin: 15px 0 0 11%;
@@ -142,7 +150,8 @@ nav a {
     color: #959595;
 }
 
-.language_bar li:first-of-type {
+.language-bar li:first-of-type,
+.language-bar--mini li:first-of-type {
     font-weight: bold;
     text-decoration: underline;
 }
@@ -432,7 +441,7 @@ main {
 }
 
 .empty_second {
-    grid-area: 1 / 7 / span 1 / span 1;
+    grid-area: 1 / 8 / span 1 / span 1;
     border-bottom: 1px solid #b9b9b9;
 }
 
@@ -803,7 +812,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1399px) {
+@media (max-width: 1400px) {
     nav {
         margin: 0 5% 0 13%;
     }
@@ -817,7 +826,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (max-width: 1200px) {
     html {
         font-size: 12px;
     }
@@ -844,7 +853,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
         margin: 0;
     }
 
-    .language_bar {
+    .language-bar, .language-bar--mini {
         position: absolute;
         top: 116px;
         right: 23px;
@@ -987,4 +996,99 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     .curve_bg {
         display: none;
     }
+}
+
+@media (max-width: 768px) {
+    .language-bar {
+        display: none;
+    }
+
+    .language-bar--mini {
+        width: 85px;
+        display: flex;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .hiddenMenu {
+        position: fixed;
+        padding: 27px;
+        top: 77px;
+        left: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200px;
+        background-color: rgba(172, 183, 219, 0.9);
+        height: 100vh;
+        -webkit-transition: left .2s;
+        -o-transition: left .2s;
+        transition: left .2s;
+        z-index: 4;
+        display: flex;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .hiddenMenuTicker {
+        display: none;
+    }
+    .btnMenu {
+        padding: 5px;
+        position: fixed;
+        top: 82px;
+        left: calc(100% - 63px);
+        cursor: pointer;
+        -webkit-transition: left .23s;
+        -o-transition: left .23s;
+        transition: left .23s;
+        z-index: 5;
+        width: 25px;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+    }
+    .btnMenu .dash {
+        display: block;
+        height: 3px;
+        background-color: #582c7e;
+        margin: 5px 0 0;
+        -webkit-transition: all .1s linear .23s;
+        -o-transition: all .1s linear .23s;
+        transition: all .1s linear .23s;
+        position: relative;
+    }
+    .btnMenu .dash1 {
+        margin-top: 0;
+    }
+    .hiddenMenuTicker:checked~.btnMenu {
+        left: calc(100vw - 199px);
+    }
+    .hiddenMenuTicker:checked~.hiddenMenu {
+        left: calc(100vw - 200px);
+    }
+    .hiddenMenuTicker:checked~.btnMenu .dash1 {
+        -webkit-transform: rotate(45deg);
+        top: 8px;
+    }
+    .hiddenMenuTicker:checked~.btnMenu .dash2 {
+        opacity: 0;
+    }
+
+    .hiddenMenuTicker:checked~.btnMenu .dash3 {
+        -webkit-transform: rotate(-45deg);
+        top: -8px;
+    }
+
+    .log_bar {
+        margin: 0 45px 0 0;
+    }
+
 }
