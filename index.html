@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
     <link href="./assets/MalagaOT/font.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>
@@ -16,16 +16,31 @@
 </head>
 
 <body>
-    <div class="bg_wrapper">
-        <div class="curve_bg"></div>
-    </div>
-    <header>
-        <div class="top_panel">
-            <h1 class="logo">
-                neutron<span>Mail</span>
-            </h1>
-            <nav>
-                <div class="menu">
+<div class="bg-wrapper">
+    <div class="bg-gradient"></div>
+</div>
+<header>
+    <div class="top-panel">
+        <h1 class="logo">
+            neutron<span>Mail</span>
+        </h1>
+        <nav>
+            <div class="menu">
+                <a href="#" title="Go to About page">About</a>
+                <a href="#" title="Go to Security page">Security</a>
+                <a href="#" title="Go to Blog page">Blog</a>
+                <a href="#" title="Go to Careers page">Careers</a>
+                <a href="#" title="Go to Support page">Support</a>
+                <a href="#" title="Go to Donate page">Donate</a>
+            </div>
+            <div class="burger-menu">
+                <input type="checkbox" id="hmt" class="burger-menu__ticker">
+                <label class="burger-menu__button" for="hmt">
+                    <span class="dash dash-1"></span>
+                    <span class="dash dash-2"></span>
+                    <span class="dash dash-3"></span>
+                </label>
+                <div class="burger-menu__hidden-menu">
                     <a href="#" title="Go to About page">About</a>
                     <a href="#" title="Go to Security page">Security</a>
                     <a href="#" title="Go to Blog page">Blog</a>
@@ -33,254 +48,249 @@
                     <a href="#" title="Go to Support page">Support</a>
                     <a href="#" title="Go to Donate page">Donate</a>
                 </div>
-                <div class="burger-menu">
-                    <input type="checkbox" id="hmt" class="hiddenMenuTicker">
-                    <label class="btnMenu" for="hmt">
-                        <span class="dash dash1"></span>
-                        <span class="dash dash2"></span>
-                        <span class="dash dash3"></span>
-                    </label>
-                    <div class="hiddenMenu">
-                        <a href="#" title="Go to About page">About</a>
-                        <a href="#" title="Go to Security page">Security</a>
-                        <a href="#" title="Go to Blog page">Blog</a>
-                        <a href="#" title="Go to Careers page">Careers</a>
-                        <a href="#" title="Go to Support page">Support</a>
-                        <a href="#" title="Go to Donate page">Donate</a>
-                    </div>
-                </div>
-            </nav>
-            <ul class="log_bar">
-                <li><a href="#" title="Log in" class="login">Log in</a></li>
-                <li><a href="#" title="Log in" class="login-mini"></a></li>
-                <li><button class="signup">Sign up</button></li>
-            </ul>
-        </div>
-        <ul class="language-bar">
-            <li><a href="#" title="Switch to English">English</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to French">French</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to Italian">Italian</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to Polish">Polish</a></li>
-        </ul>
-        <ul class="language-bar--mini">
-            <li><a href="#" title="Switch to English">En</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to French">Fr</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to Italian">It</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="Switch to Polish">Pl</a></li>
-        </ul>
-        <div class="general_info">
-            <div class="general_info__text">
-                <div class="general_info__title">Secure Email Communication</div>
-                <p class="based-in">Based in <span class="redword">Somewhere</span></p>
             </div>
-            <ul class="start_links">
-                <li><button name="create_account">Create account</button></li>
-                <li><button name="create_account--mini" class="new-account"></button></li>
-                <li><button name="appstore" class="apple"></button></li>
-                <li><button name="google_play" class="google_play"></button></li>
-            </ul>
-            <ul class="socialmedia_bar">
-                <li><a href="#" title="go to Google+" class="google_plus"></a></li>
-                <li><a href="#" title="go to Facebook" class="facebook"></a></li>
-                <li><a href="#" title="go to Twitter" class="twitter"></a></li>
-            </ul>
-        </div>
-    </header>
-    <main>
-        <div class="empty_first"></div>
-        <div class="empty_second"></div>
-        <div class="empty_third"></div>
-        <div class="advantage privacy">
-            <div class="advantage__header">
-                <img src="./assets/img/privacy_icon.png" alt="" class="advantage__icon">
-                <div class="advantage__title">
-                    <p class="advantage__title-main">Swiss Privacy</p>
-                    <p class="advantage__title-sub">Data Security and Neutrality</p>
-                </div>
-            </div>
-            <p class="advantage__text">NeutronMail is incorporated in Somewhere and all
-                our servers are located in Switzerland. This means all user data is
-                protected by strict Swiss privacy laws.</p>
-        </div>
-        <div class="advantage encryption">
-            <div class="advantage__header">
-                <img src="./assets/img/encryption_icon.png" alt="" class="advantage__icon">
-                <div class="advantage__title">
-                    <p class="advantage__title-main">Double Encryption</p>
-                    <p class="advantage__title-sub">Automatic Email Security</p>
-                </div>
-            </div>
-            <p class="advantage__text">All emails are secured automatically with end-to-end
-                encryption. This means even we cannot decrypt and read your emails.
-                As a result, your encrypted emails cannot be shared with third parties.</p>
-        </div>
-        <div class="advantage anonymous">
-            <div class="advantage__header">
-                <img src="./assets/img/anonymous_icon.png" alt="" class="advantage__icon">
-                <div class="advantage__title">
-                    <p class="advantage__title-main">Anonymous Email</p>
-                    <p class="advantage__title-sub">Protect Your Privacy</p>
-                </div>
-            </div>
-            <p class="advantage__text">No personal information is required to create your
-                secure email account. By default, we do not keep any IP logs which can be
-                linked to your anonymous email account. Your privacy comes first.</p>
-        </div>
-        <div class="feature">
-            <p class="feature__title">Physical Security</p>
-            <p class="feature__description">NeutronMail's infrastructure resides in Europe's
-                <span class="redword">most secure</span>
-                <br>datacenter, underneath 1000 meters of solid rock.
-            </p>
-            <button name="learn_more">Learn more about our security features</button>
-
-        </div>
-        <ul class="clients">
-            <li class="wsj"><a href="#" title="visit client website"></a></li>
-            <li class="times"><a href="#" title="visit client website"></a></li>
-            <li class="guardian"><a href="#" title="visit client website"></a></li>
-            <li class="forbes"><a href="#" title="visit client website"></a></li>
-            <li class="frankfurter"><a href="#" title="visit client website"></a></li>
-            <li class="fox"><a href="#" title="visit client website"></a></li>
-        </ul>
-        <div class="slider">
-            <input type="radio" name="slide" id="slide1" checked="">
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <div class="slide">
-                <div class="dots">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-                <p>
-                    A new email service being developed by a group from MIT and CERN promises to bring secure,
-                    encrypted email to the masses and keep sensitive information away from prying eyes.
-                    <br>
-                    <span class="author">&mdash; Boston Herald</span>
-                </p>
-            </div>
-            <div class="slide">
-                <div class="dots">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    <br>
-                    <span class="author">&mdash; John Doe</span>
-                </p>
-            </div>
-            <div class="slide">
-                <div class="dots">
-                    <label for="slide1"></label>
-                    <label for="slide2"></label>
-                    <label for="slide3"></label>
-                </div>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                    qui officia deserunt mollit anim id est laborum.
-                    <br>
-                    <span class="author">&mdash; Herald Boston</span>
-                </p>
-            </div>
-        </div>
-        <div class="download">
-            <p class="download__title">Any device, anywhere</p>
-            <p class="download__text">The NeutronMail inbox is optimized for productivity.
-                Each detail within our secure email service is optimized to help you better read,
-                organize, and send email.</p>
-            <div class="download__links">
-                <a href="#" title="Download on the App Store" class="download__links-ios"></a>
-                <a href="#" title="Get it on Google play" class="download__links-android"></a>
-            </div>
-            <img src="./assets/img/devices_bg.png" alt="" class="download__bg">
-        </div>
-        <div class="donate">
-            <div class="donate__text">
-                <p class="donate__title">Privacy is a fundamental human right.</p>
-                <p class="donate__description">Your support helps us to protect privacy world-wide.</p>
-            </div>
-            <div class="donate__links">
-                <button name="upgrade_to_paid">Upgrade to Paid Plan</button>
-                <button name="donate">Donate</button>
-                <button name="upgrade_to_paid--mini"></button>
-                <button name="donate--mini"></button>
-            </div>
-        </div>
-        <div class="partners">
-            <p class="partners__title">Those, who help us secure your privacy</p>
-            <ul class="partners__links">
-                <li class="mit"><a href="#" title="visit partner website"></a></li>
-                <li class="deltalis"><a href="#" title="visit partner website"></a></li>
-                <li class="fonfit"><a href="#" title="visit partner website"></a></li>
-                <li class="quovadis"><a href="#" title="visit partner website"></a></li>
-                <li class="cyberzov"><a href="#" title="visit partner website"></a></li>
-                <li class="radware"><a href="#" title="visit partner website"></a></li>
-                <li class="ipmax"><a href="#" title="visit partner website"></a></li>
-            </ul>
-        </div>
-    </main>
-    <footer>
-        <ul class="contacts">
-            <li>General: <a href="mailto:contact@neutronmail.ch" title="write a message"><span
-                        class="bold">contact@neutronmail.ch</span></a></li>
-            <li>Media: <a href="mailto:media@neutronmail.ch" title="write a message"><span
-                        class="bold">media@neutronmail.ch</span></a></li>
-            <li>Security: <a href="mailto:security@neutronmail.ch" title="write a messag"><span
-                        class="bold">security@neutronmail.ch</span></a></li>
+        </nav>
+        <ul class="log-bar">
+            <li><a href="#" title="Log in" class="log-bar__login">Log in</a></li>
+            <li><a href="#" title="Log in" class="log-bar__login-mini"></a></li>
             <li>
-                <br>
-                <p>For support inquiries, please visit</p>
-                <p class="bold underlined"><a href="https://neutronmail.com/support"
-                        title="Get support">neutronmail.com/support</a></p>
+                <button class="log-bar__signup">Sign up</button>
             </li>
         </ul>
-        <ul class="company">
-            <p>Company</p>
-            <li><a href="#" title="visit page">Blog</a></li>
-            <li><a href="#" title="visit page">Team</a></li>
-            <li><a href="#" title="visit page">Careers</a></li>
-            <li><a href="#" title="visit page">Support</a></li>
-            <li><a href="#" title="visit page">Donate</a></li>
+    </div>
+    <ul class="language-bar">
+        <li><a href="#" title="Switch to English">English</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to French">French</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to Italian">Italian</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to Polish">Polish</a></li>
+    </ul>
+    <ul class="language-bar--mini">
+        <li><a href="#" title="Switch to English">En</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to French">Fr</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to Italian">It</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="Switch to Polish">Pl</a></li>
+    </ul>
+    <div class="general-info">
+        <div class="general-info__text">
+            <div class="general-info__title">Secure Email Communication</div>
+            <p class="based-in">Based in <span class="redword">Somewhere</span></p>
+        </div>
+        <ul class="start-links">
+            <li>
+                <button name="create-account">Create account</button>
+            </li>
+            <li>
+                <button name="create-account--mini" class="new-account"></button>
+            </li>
+            <li>
+                <button name="appstore" class="apple"></button>
+            </li>
+            <li>
+                <button name="google-play" class="google-play"></button>
+            </li>
         </ul>
-        <ul class="legal">
-            <p>Legal</p>
-            <li><a href="#" title="visit page">Imprint</a></li>
-            <li><a href="#" title="visit page">Privacy Policy</a></li>
-            <li><a href="#" title="visit page">Terms & Conditions</a></li>
-            <li><a href="#" title="visit page">Transparency Report</a></li>
-            <li><a href="#" title="visit page">Report Abuse</a></li>
+        <ul class="socialmedia-bar">
+            <li><a href="#" title="go to Google+" class="google-plus"></a></li>
+            <li><a href="#" title="go to Facebook" class="facebook"></a></li>
+            <li><a href="#" title="go to Twitter" class="twitter"></a></li>
         </ul>
-        <ul class="neutronmail">
-            <p>NeutronMail</p>
-            <li><a href="#" title="visit page">Pricing</a></li>
-            <li><a href="#" title="visit page">Security</a></li>
-            <li><a href="#" title="visit page">Shop</a></li>
-            <li><a href="#" title="visit page">Press/Media Kit</a></li>
-            <li><a href="#" title="visit page">Onion Site</a></li>
+    </div>
+</header>
+<main>
+    <div class="empty-first"></div>
+    <div class="empty-second"></div>
+    <div class="empty-third"></div>
+    <div class="advantage privacy">
+        <div class="advantage__header">
+            <img src="./assets/img/privacy_icon.png" alt="" class="advantage__icon">
+            <div class="advantage__title">
+                <p class="advantage__title--main">Swiss Privacy</p>
+                <p class="advantage__title--sub">Data Security and Neutrality</p>
+            </div>
+        </div>
+        <p class="advantage__text">NeutronMail is incorporated in Somewhere and all
+            our servers are located in Switzerland. This means all user data is
+            protected by strict Swiss privacy laws.</p>
+    </div>
+    <div class="advantage encryption">
+        <div class="advantage__header">
+            <img src="./assets/img/encryption_icon.png" alt="" class="advantage__icon">
+            <div class="advantage__title">
+                <p class="advantage__title--main">Double Encryption</p>
+                <p class="advantage__title--sub">Automatic Email Security</p>
+            </div>
+        </div>
+        <p class="advantage__text">All emails are secured automatically with end-to-end
+            encryption. This means even we cannot decrypt and read your emails.
+            As a result, your encrypted emails cannot be shared with third parties.</p>
+    </div>
+    <div class="advantage anonymous">
+        <div class="advantage__header">
+            <img src="./assets/img/anonymous_icon.png" alt="" class="advantage__icon">
+            <div class="advantage__title">
+                <p class="advantage__title--main">Anonymous Email</p>
+                <p class="advantage__title--sub">Protect Your Privacy</p>
+            </div>
+        </div>
+        <p class="advantage__text">No personal information is required to create your
+            secure email account. By default, we do not keep any IP logs which can be
+            linked to your anonymous email account. Your privacy comes first.</p>
+    </div>
+    <div class="feature">
+        <p class="feature__title">Physical Security</p>
+        <p class="feature__description">NeutronMail's infrastructure resides in Europe's
+            <span class="redword">most secure</span>
+            <br>datacenter, underneath 1000 meters of solid rock.
+        </p>
+        <button name="learn-more">Learn more about our security features</button>
+
+    </div>
+    <ul class="clients">
+        <li class="wsj"><a href="#" title="visit client website"></a></li>
+        <li class="times"><a href="#" title="visit client website"></a></li>
+        <li class="guardian"><a href="#" title="visit client website"></a></li>
+        <li class="forbes"><a href="#" title="visit client website"></a></li>
+        <li class="frankfurter"><a href="#" title="visit client website"></a></li>
+        <li class="fox"><a href="#" title="visit client website"></a></li>
+    </ul>
+    <div class="slider">
+        <input type="radio" name="slide" id="slide-1" checked="">
+        <input type="radio" name="slide" id="slide-2">
+        <input type="radio" name="slide" id="slide-3">
+        <div class="slide">
+            <div class="dots">
+                <label for="slide-1"></label>
+                <label for="slide-2"></label>
+                <label for="slide-3"></label>
+            </div>
+            <p>
+                A new email service being developed by a group from MIT and CERN promises to bring secure,
+                encrypted email to the masses and keep sensitive information away from prying eyes.
+                <br>
+                <span class="author">&mdash; Boston Herald</span>
+            </p>
+        </div>
+        <div class="slide">
+            <div class="dots">
+                <label for="slide-1"></label>
+                <label for="slide-2"></label>
+                <label for="slide-3"></label>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <br>
+                <span class="author">&mdash; John Doe</span>
+            </p>
+        </div>
+        <div class="slide">
+            <div class="dots">
+                <label for="slide-1"></label>
+                <label for="slide-2"></label>
+                <label for="slide-3"></label>
+            </div>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit anim id est laborum.
+                <br>
+                <span class="author">&mdash; Herald Boston</span>
+            </p>
+        </div>
+    </div>
+    <div class="download">
+        <p class="download__title">Any device, anywhere</p>
+        <p class="download__text">The NeutronMail inbox is optimized for productivity.
+            Each detail within our secure email service is optimized to help you better read,
+            organize, and send email.</p>
+        <div class="download__links">
+            <a href="#" title="Download on the App Store" class="download__links--ios"></a>
+            <a href="#" title="Get it on Google play" class="download__links--android"></a>
+        </div>
+        <img src="./assets/img/devices_bg.png" alt="" class="download__bg">
+    </div>
+    <div class="donate">
+        <div class="donate__text">
+            <p class="donate__title">Privacy is a fundamental human right.</p>
+            <p class="donate__description">Your support helps us to protect privacy world-wide.</p>
+        </div>
+        <div class="donate__links">
+            <button name="upgrade-to-paid">Upgrade to Paid Plan</button>
+            <button name="donate">Donate</button>
+            <button name="upgrade-to-paid--mini"></button>
+            <button name="donate--mini"></button>
+        </div>
+    </div>
+    <div class="partners">
+        <p class="partners__title">Those, who help us secure your privacy</p>
+        <ul class="partners__links">
+            <li class="mit"><a href="#" title="visit partner website"></a></li>
+            <li class="deltalis"><a href="#" title="visit partner website"></a></li>
+            <li class="fonfit"><a href="#" title="visit partner website"></a></li>
+            <li class="quovadis"><a href="#" title="visit partner website"></a></li>
+            <li class="cyberzov"><a href="#" title="visit partner website"></a></li>
+            <li class="radware"><a href="#" title="visit partner website"></a></li>
+            <li class="ipmax"><a href="#" title="visit partner website"></a></li>
         </ul>
-        <ul class="socialmedia_links">
-            <li><a href="#" title="go to Facebook">Facebook</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="go to Twitter">Twitter</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="go to">Google+</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="go to Google+">Feedback Forum</a></li>
-            <li class="slash">/</li>
-            <li><a href="#" title="go to Reddit">Reddit</a></li>
-        </ul>
-        <div class="copyright">&copy; 2017 Neutron Technologies AG. All Rights Reserved.</div>
-    </footer>
+    </div>
+</main>
+<footer>
+    <ul class="contacts">
+        <li>General: <a href="mailto:contact@neutronmail.ch" title="write a message"><span
+                class="bold">contact@neutronmail.ch</span></a></li>
+        <li>Media: <a href="mailto:media@neutronmail.ch" title="write a message"><span
+                class="bold">media@neutronmail.ch</span></a></li>
+        <li>Security: <a href="mailto:security@neutronmail.ch" title="write a messag"><span
+                class="bold">security@neutronmail.ch</span></a></li>
+        <li>
+            <br>
+            <p>For support inquiries, please visit</p>
+            <p class="bold underlined"><a href="https://neutronmail.com/support"
+                                          title="Get support">neutronmail.com/support</a></p>
+        </li>
+    </ul>
+    <ul class="company">
+        <p>Company</p>
+        <li><a href="#" title="visit page">Blog</a></li>
+        <li><a href="#" title="visit page">Team</a></li>
+        <li><a href="#" title="visit page">Careers</a></li>
+        <li><a href="#" title="visit page">Support</a></li>
+        <li><a href="#" title="visit page">Donate</a></li>
+    </ul>
+    <ul class="legal">
+        <p>Legal</p>
+        <li><a href="#" title="visit page">Imprint</a></li>
+        <li><a href="#" title="visit page">Privacy Policy</a></li>
+        <li><a href="#" title="visit page">Terms & Conditions</a></li>
+        <li><a href="#" title="visit page">Transparency Report</a></li>
+        <li><a href="#" title="visit page">Report Abuse</a></li>
+    </ul>
+    <ul class="neutronmail">
+        <p>NeutronMail</p>
+        <li><a href="#" title="visit page">Pricing</a></li>
+        <li><a href="#" title="visit page">Security</a></li>
+        <li><a href="#" title="visit page">Shop</a></li>
+        <li><a href="#" title="visit page">Press/Media Kit</a></li>
+        <li><a href="#" title="visit page">Onion Site</a></li>
+    </ul>
+    <ul class="socialmedia-links">
+        <li><a href="#" title="go to Facebook">Facebook</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="go to Twitter">Twitter</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="go to">Google+</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="go to Google+">Feedback Forum</a></li>
+        <li class="slash">/</li>
+        <li><a href="#" title="go to Reddit">Reddit</a></li>
+    </ul>
+    <div class="copyright">&copy; 2017 Neutron Technologies AG. All Rights Reserved.</div>
+</footer>
 </body>
 
 </html>
