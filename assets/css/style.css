@@ -3,6 +3,7 @@ html {
 }
 
 body {
+    min-width: 320px;
     max-width: 1800px;
     margin: 0 auto;
     font-family: 'Titillium Web', sans-serif;
@@ -32,7 +33,7 @@ body {
     transform: skew(0, -6.5deg);
 }
 
-.burger-menu {
+.burger-menu, [name="create_account--mini"], .login-mini, [name="upgrade_to_paid--mini"], [name="donate--mini"] {
     display: none;
 }
 
@@ -57,12 +58,12 @@ nav {
     box-sizing: border-box;
 }
 
-.login::before, .facebook::before, .twitter::before, .google_plus::before, .apple::before, .google_play::before {
+.login::before, .login-mini::before, .facebook::before, .twitter::before, .google_plus::before, .apple::before, .google_play::before {
     font-family: "Font Awesome 5 Brands";
     font-weight: 900;
 }
 
-.login::before {
+.login::before, .login-mini::before {
     font-family: "Font Awesome 5 Free";
     content: "\f2f6";
     color: #582c7e;
@@ -85,15 +86,21 @@ nav {
     content: "\f179";
 }
 
+.new-account::before {
+    content: "+";
+    font-size: 30px;
+}
+
 .google_play::before {
     content: "\f3ab";
 }
 
-[name="upgrade_to_paid"]::before {
+[name="upgrade_to_paid"]::before,
+[name="upgrade_to_paid--mini"]::before {
     content: "\f382";
 }
 
-[name="donate"]::before {
+[name="donate"]::before, [name="donate--mini"]::before {
     content: "\f155";
 }
 
@@ -161,10 +168,10 @@ nav a {
 }
 
 header {
-    height: 998px;
+    height:55.45vw;
     background-image: url(../img/header_bg.png);
     background-repeat: no-repeat;
-    background-size: 1800px 988px;
+    background-size: 100%;
     background-position: center center;
 }
 
@@ -205,7 +212,7 @@ button {
     color: #ffffff;
 }
 
-[name="appstore"], [name="google_play"] {
+[name="appstore"], [name="google_play"], [name="create_account--mini"] {
     width: 46px;
     height: 46px;
     border: none;
@@ -219,11 +226,17 @@ button {
     margin: 0 20px 0 0;
 }
 
+[name="create_account--mini"] {
+    background: #5f2966;
+
+}
+
 [name="google_play"] {
     background: #4a1c50;
 }
 
 [name="create_account"],
+[name="create_account--mini"],
 [name="appstore"],
 [name="google_play"] {
     position: relative;
@@ -254,6 +267,7 @@ button {
     top: 324px;
     left: calc(100% - 52px);
     font-size: 1.375rem;
+    z-index: 10;
 }
 
 .socialmedia_bar li {
@@ -262,7 +276,7 @@ button {
 
 main {
     width: 100%;
-    margin-top: -209px;
+    margin-top: -11.6vw;
     display: grid;
     grid-template-columns: 15.67% 6.56% 17.44% 24% 11.22% 2.89% 11.55% 10.67%;
     grid-template-rows: 128px 227px 238px 196px 266px 368px 327px 287px;
@@ -361,7 +375,7 @@ main {
     text-align: right;
 }
 
-[name="upgrade_to_paid"], [name="donate"] {
+[name="upgrade_to_paid"], [name="donate"], [name="upgrade_to_paid--mini"], [name="donate--mini"] {
     position: relative;
     z-index: auto;
     height: 56px;
@@ -371,7 +385,7 @@ main {
     font-weight: bold;
 }
 
-[name="upgrade_to_paid"] {
+[name="upgrade_to_paid"], [name="upgrade_to_paid--mini"] {
     width: 246px;
     margin-right: 48px;
     background: #5f2966;
@@ -379,7 +393,7 @@ main {
     box-shadow: 0px 7px 9px 0px rgba(100, 115, 151, 0.15);
 }
 
-[name="donate"] {
+[name="donate"], [name="donate--mini"] {
     width: 166px;
     background: #5e7bea;
     background: linear-gradient(to left, #5e7bea, #36bae1);
@@ -528,11 +542,15 @@ main {
 }
 
 .encryption .advantage__icon {
-    margin: -18px -8px 23px -27px;
+    margin: -6px 8px 23px -12px;
 }
 
 .anonymous .advantage__icon {
     margin: -8px 6px 27px -17px;
+}
+
+.advantage__icon {
+    height: 100%;
 }
 
 .privacy .advantage__header {
@@ -672,12 +690,12 @@ main {
     text-align: center;
 }
 
-.login::before, [name="upgrade_to_paid"]::before, [name="donate"]::before {
+.login::before, .login-mini::before, [name="upgrade_to_paid"]::before, [name="donate"]::before, [name="upgrade_to_paid--mini"]::before, [name="donate--mini"]::before {
     padding-right: 5px;
     font-family: "Font Awesome 5 Free";
 }
 
-[name="upgrade_to_paid"]::before {
+[name="upgrade_to_paid"]::before, [name="upgrade_to_paid--mini"]::before {
     font-size: 0.9375rem;
 }
 
@@ -806,13 +824,34 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 }
 
-@media (min-width: 1801px) {
+@media (min-width: 1800px) {
     .socialmedia_bar {
         left: calc((100% - 1800px) / 2 + 1748px);
+    }
+
+    header {
+        height: 988px;
+    }
+
+    main {
+        margin-top: -199px;
     }
 }
 
 @media (max-width: 1400px) {
+
+    .general_info__title {
+        margin: 60px 0 16px 0;
+    }
+
+    .start_links {
+        margin: 40px 0 0 0
+    }
+
+    main {
+        margin-top: -12.6vw;
+    }
+
     nav {
         margin: 0 5% 0 13%;
     }
@@ -884,6 +923,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 
     main {
+        margin-top: -17.6vw;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 128px 183px 238px 156px 220px 220px 269px 196px;
     }
@@ -967,7 +1007,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     .download__bg {
         position: absolute;
         z-index: -3;
-        top: 1545px;
+        top: 1200px;
         left: 72px;
         width: 30%;
     }
@@ -982,11 +1022,7 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 
     .start_links {
-        margin: 100px 0 0 0;
-    }
-
-    main {
-        margin-top: -310px;
+        margin: 30px 0 0 0;
     }
 
     .socialmedia_bar {
@@ -994,6 +1030,13 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
     }
 
     .curve_bg {
+        display: none;
+    }
+}
+
+@media (max-width: 930px) {
+
+    .based-in {
         display: none;
     }
 }
@@ -1091,4 +1134,225 @@ button:hover, .download__links-ios:hover::before, .download__links-android:hover
         margin: 0 45px 0 0;
     }
 
+    .advantage__header {
+        flex-direction: column;
+    }
+
+    .advantage__text, [name="create_account"], .download, .slider {
+        display: none;
+    }
+
+    .privacy .advantage__icon {
+        margin: 0 0 5px 0;
+    }
+
+    .encryption .advantage__icon {
+        margin: 6px 0 5px 0;
+    }
+
+    .anonymous .advantage__icon {
+        margin: 3px 0 10px 0;
+    }
+
+    .privacy {
+        padding: 0 0 0 20px;
+    }
+
+    .encryption, .anonymous {
+        padding: 0 20px;
+    }
+
+    .advantage, .advantage__header {
+        text-align: center;
+        display: block;
+    }
+
+    main {
+        grid-template-rows: 128px 130px 238px 156px 269px 232px;
+        margin-top: -24.6vw;
+    }
+
+    [name="create_account--mini"] {
+        margin-right: 20px;
+        display: inline-block;
+        margin-top: 9px;
+        line-height: 39px;
+    }
+
+    .start_links {
+        align-items: center;
+    }
+
+    .general_info__title {
+        font-size: 2rem;
+        color: #000000;
+    }
+
+    .start_links::before {
+        background: none;
+    }
+
+    .donate {
+        grid-area: 5 / 1 / span 1 / span 3;
+    }
+
+    .partners {
+        grid-area: 6 / 1 / span 1 / span 3;
+        text-align: center;
+    }
+
 }
+
+@media (max-width: 580px) {
+
+    .login, .signup, [name="upgrade_to_paid"], [name="donate"], .contacts, .clients, .partners {
+        display: none;
+    }
+
+    .login-mini, [name="upgrade_to_paid--mini"], [name="donate--mini"] {
+        display: inline-block;
+    }
+
+    .general_info__title {
+        margin-top: 60px;
+        font-size: 1.85rem;
+        color: #454545;
+    }
+
+    .log_bar {
+        width: auto;
+        margin: 0 76px 0 0;
+    }
+
+    .donate__links {
+        display: flex;
+        justify-content: center;
+    }
+
+    [name="upgrade_to_paid--mini"], [name="donate--mini"] {
+        width: 56px;
+    }
+
+    [name="upgrade_to_paid--mini"]::before, [name="donate--mini"]::before {
+        padding: 0;
+    }
+
+    main {
+        grid-template-rows: 130px 254px 270px;
+    }
+
+    .privacy {
+        grid-area: 1 / 1 / span 1 / span 1;
+    }
+
+    .encryption {
+        grid-area: 1 / 2 / span 1 / span 1;
+    }
+
+    .anonymous {
+        grid-area: 1 / 3 / span 1 / span 1;
+    }
+
+    .feature {
+        grid-area: 2 / 1 / span 1 / span 3;
+    }
+
+    .donate {
+        grid-area: 3 / 1 / span 1 / span 3;
+    }
+
+    footer {
+        grid-template: 153px 97px 1fr / 1fr 1fr 1fr;
+        padding: 0 10px;
+    }
+
+    .company {
+        grid-area: 1 / 1 / span 3 / span 1;
+        padding: 0 10px;
+    }
+
+    .legal {
+        grid-area: 1 / 2 / span 1 / span 1;
+        padding: 0 10px 0 0;
+    }
+
+    .neutronmail {
+        grid-area: 1 / 3 / span 1 / span 1;
+        padding: 0 10px 0 0;
+    }
+
+    .company li, .legal li, .neutronmail li {
+        margin: 0 10px 10px 0;
+    }
+
+    .log_bar {
+        padding: 0;
+    }
+
+    header {
+        height: 100vw;
+    }
+
+    .advantage__title-main {
+        font-size: 1.2rem;
+    }
+
+    .advantage__title-sub {
+        font-size: 0.85rem;
+    }
+
+    [name="learn_more"] {
+        width: 230px;
+    }
+
+    .socialmedia_bar {
+        position: absolute;
+        flex-direction: row;
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        top: 15px;
+        left: 50%;
+        margin: 0 auto;
+        align-self: center;
+        transform: translate(-50%, 0);
+    }
+
+    .btnMenu {
+        left: calc(100% - 38px)
+    }
+
+    .donate {
+        padding: 0 20px;
+    }
+
+    .donate__description {
+        font-size: 1.2rem;
+    }
+
+    .donate__title {
+        font-size: 1.8rem;
+    }
+
+    .donate__text {
+        padding-top: 20px;
+    }
+
+    .feature__title {
+        font-size: 2.5rem;
+    }
+
+    .feature {
+        padding: 40px 40px 0px 20px;
+    }
+}
+
+    @media (max-width: 380px) {
+        header {
+            height: 130vw;
+        }
+
+        main {
+            margin-top: -40.6vw;
+        }
+    }
